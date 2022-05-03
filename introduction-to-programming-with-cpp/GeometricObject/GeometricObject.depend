@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1647138608 source:e:\cs_programs\c++程序设计\geometricobject\main.cpp
+	"GeometricObject.h"
+	"DerivedCircle.h"
+	"DerivedRectangle.h"
+	"Triangle.h"
+	<iostream>
+
+1647067757 source:e:\cs_programs\c++程序设计\geometricobject\geometricobject.cpp
+	"GeometricObject.h"
+
+1647086928 e:\cs_programs\c++程序设计\geometricobject\geometricobject.h
+	<string>
+
+1647068407 source:e:\cs_programs\c++程序设计\geometricobject\derivedcircle.cpp
+	"DerivedCircle.h"
+
+1647086157 e:\cs_programs\c++程序设计\geometricobject\derivedcircle.h
+	"GeometricObject.h"
+
+1647069055 source:e:\cs_programs\c++程序设计\geometricobject\derivedrectangle.cpp
+	"DerivedRectangle.h"
+
+1647068744 e:\cs_programs\c++程序设计\geometricobject\derivedrectangle.h
+	"GeometricObject.h"
+
+1647150523 e:\cs_programs\c++程序设计\geometricobject\triangle.h
+	"GeometricObject.h"
+	"TriangleException.h"
+	"NonPositiveSideException.h"
+	<cmath>
+
+1647136209 e:\cs_programs\c++程序设计\geometricobject\triangleexception.h
+	<stdexcept>
+
+1647138241 e:\cs_programs\c++程序设计\geometricobject\nonpositivesideexception.h
+	<stdexcept>
+

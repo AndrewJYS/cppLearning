@@ -111,14 +111,21 @@ int main() {
 **2.只有实例函数可以被定义为只读函数，静态函数不能被定义为只读函数**  
   
 ### 对象数组  
-  
+
+```c++
 Circle array[10];  
+```
+
 这条语句创建了包含10个Circle对象的数组，且调用无参的构造函数，初始化数组中的每个元素  
+
+```c++
 Circle array[3] = {Circle(1), Circle(2), Circle(3)};  
+```
+
 该语句用数组初始化语句声明对象数组，且通过有参构造函数初始化对象数组元素  
   
 ## 参考  
 
-Introduction to Programming with C++, 3rd edition, Chapter 9, 10, 11  
+Introduction to Programming with C++, 3rd edition, Chapter 9, 10  
 C++ Primer Plus, 6th edition, Chapter 10  
 Thinking in C++, 2nd edition, Chapter 1  

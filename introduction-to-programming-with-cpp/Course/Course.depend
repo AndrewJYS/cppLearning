@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1647063336 source:e:\cs_programs\c++程序设计\course\main.cpp
+	<iostream>
+	<string>
+	"Course.h"
+
+1647063052 e:\cs_programs\c++程序设计\course\course.h
+	<string>
+
+1647063356 source:e:\cs_programs\c++程序设计\course\course.cpp
+	<iostream>
+	"Course.h"
+
