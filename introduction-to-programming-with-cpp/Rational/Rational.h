@@ -30,7 +30,7 @@ public:
     Rational& operator/=(const Rational& secondRational);
 
     // define function operator []
-    Rational& operator[](int index);
+    int& operator[](int index);
 
     //define function operators for prefix ++ and --
     Rational& operator++();
@@ -43,6 +43,9 @@ public:
     //define function operators for unary + and -
     Rational operator+();
     Rational operator-();
+
+    // automatic conversion
+    operator double();
 
     //define << and >> operators
     friend ostream& operator<<(ostream&, const Rational&);

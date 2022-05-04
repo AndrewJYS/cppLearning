@@ -128,4 +128,3 @@ Circle array[3] = {Circle(1), Circle(2), Circle(3)};
 
 Introduction to Programming with C++, 3rd edition, Chapter 9, 10  
 C++ Primer Plus, 6th edition, Chapter 10  
-Thinking in C++, 2nd edition, Chapter 1  

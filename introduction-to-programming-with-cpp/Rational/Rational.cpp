@@ -108,7 +108,7 @@ string Rational::toString() const
     return ss.str();
 }
 
-Ratinoal::Rational(int numerator)
+Rational::Rational(int numerator)
 {
     this->numerator = numerator;
     this->denominator = 1;
@@ -185,6 +185,11 @@ Rational Rational::operator+()
 Rational Rational::operator-()
 {
     return Rational(-numerator, denominator);
+}
+
+Rational::operator double()
+{
+    return doubleValue();
 }
 
 //define the output and input operators
