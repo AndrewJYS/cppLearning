@@ -19,6 +19,8 @@ int main()
         cout << "runtime error" << endl;
     }
     cout << "statement 2" << endl;
+
+    return 0;
 }
 
 void function1()

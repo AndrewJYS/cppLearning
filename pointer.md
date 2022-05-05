@@ -14,6 +14,8 @@ const double* const pvalue = &radius;
 ```c++
 int list1[10], list2[10];
 list1 = list2; //非法语句
+
+char a[3]; a = "AB"; //同理，也是非法语句 
 ```
 
 ## 动态内存持久分配  
