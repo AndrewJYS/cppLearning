@@ -4,7 +4,7 @@
 
 ## 参考  
 
-Introduction to programming with C++ (3rd edtion)  
-C++ primer plus (6th edition)  
-Thinking in C++ (2nd edition)  
-Effective C++  
+[Introduction to programming with C++ (3rd edtion)](https://book.douban.com/subject/20056055/)  
+[C++ primer plus (6th edition)](https://book.douban.com/subject/6971116/)  
+[Thinking in C++, Volume 1 (2nd edition)](https://book.douban.com/subject/1459728/)  
+[Effective C++](https://book.douban.com/subject/5387403/)  
