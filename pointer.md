@@ -1,6 +1,29 @@
 
 # 指针  
 
+## void 指针  
+
+如果声明指针是void\*，它意味着任何类型的地址都可以间接引用那个指针。一旦间接引用了void*，就会失去关于类型的信息。需要在使用前转换为正确的类型。  
+
+**注意：**  
+**一般来说，要避免使用void指针，只有在一些少见的特殊情况下才用**  
+
+```c++
+void* p;
+
+int* a = new int(9);
+double* b = new double(9.2);
+
+p = &a;
+//cout << *p << endl; //报错
+
+cout << *((int*)p) << endl; //只是做了转换，并不会输出9
+
+*((int*)p) = 8;
+//cout << *p << endl; //仍然报错
+cout << *((int*)p) << endl; // output 8
+```
+
 ## 数组与指针  
 
 一旦数组声明之后，是不能改变数组地址的。**下面语句非法**  
@@ -192,5 +215,6 @@ this指针指向被调用的对象本身
 
 ## 参考  
 
+Thinking in C++, Chapter 3  
 C++ Primer Plus, Chapter 7  
 Introduction to Programming with C++, 3rd edition, Chapter 11  
