@@ -19,8 +19,13 @@ int main() {
 
 ## 常量指针  
 
+常量指针指向一个不变的内存位置，但该内存位置的实际值时可以改变的。下述语句中第一个const表示常量数据，第二个const表示常量指针。  
+
+```c++
 const int* const a = new int(3);  
-第一个const表明常量数据，第二个const表明常量指针  
+```
+
+示例如下：  
 
 ```c++
 int test = 2;
@@ -34,9 +39,15 @@ int* const c = new int(2);
 c = &test; // 报错
 ```
 
+**注意：**  
+**不能把const指针赋值给非const指针**  
+
 ```c++
 int* const d = new int(4);
 int* e = &d; //报错，不能把const指针赋值给非const指针
 ```
 
-## 
+## 参考  
+
+C++ Primer Plus, Chapter 7.3  
+Introduction to Programming with C++, 3rd edition, Chapter 11  
