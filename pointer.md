@@ -35,6 +35,14 @@ list1 = list2; //非法语句
 char a[3]; a = "AB"; //同理，也是非法语句 
 ```
 
+数组名被解释为第一个元素的地址，而对数组名应用地址运算符时，得到的是整个数组的地址。从数字上说，两个地址相同，但从概念上来说，tell是一个2字节内存块的地址，而&tell是一个20字节内存块的地址。因此，tell+1将地址+2;\&tell+2将地址+20。  
+
+```c++
+short tell[10];
+cout << tell << endl;  //address of first element
+cout << &tell << endl; //address of whole array
+```
+
 ## 指针数组  
 
 声明指针数组：DataType* p[n];

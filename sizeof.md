@@ -36,17 +36,47 @@ node nd;
 cout << sizeof(nd) << endl;  //output 24
 ```
 
+union  
+
+```c++
+union one4all {
+    int int_val;
+    long long ll_val;
+    char char_val;
+};
+
+one4all oa;
+cout << sizeof(oa) << endl; // union的长度为最大成员长度，output 8
+```
+
 数组  
+
+对数组应用sizeof得到的是数组的长度，而对指针应用sizeof得到的是指针的长度，即使指针指向的是一个数组  
 
 ```c++
 int int_array[10];
 cout << sizeof(int_array) << endl;  //output 40
+
+int* pa = int_array;
+cout << sizeof(pa) << endl;  //output 8
 ```
 
+字符串  
+
 ```c++
-char* str = "1243523636";
-cout << sizeof(str) << endl;  //output 8
-cout << sizeof(str[0]) << endl;  //output 1
+string str1 = "1243523636";
+cout << sizeof(str1) << endl;  //output 32
+
+char str2[21] = "1243523636";
+cout << sizeof(str2) << endl;  //output 21
+cout << int(str2[15]) << endl;  // output 0
+
+char str3[] = "1243523636";
+cout << sizeof(str3) << endl;  //output 11
+
+char* str4 = "1243523636";
+cout << sizeof(str4) << endl;  //output 8
+cout << sizeof(str4[0]) << endl;  //output 1
 ```
 
 容器  
@@ -68,6 +98,7 @@ public:
     double double_b;
     short short_c;
     long long ll_d;
+    string ss;
 
     c() {}
 
@@ -77,13 +108,13 @@ public:
 };
 
 c class1;
-cout << sizeof(class1) << endl;  //output 32
+cout << sizeof(class1) << endl;  //output 64
 
 c class2("1234567890");
-cout << sizeof(class2) << endl;  //output 32
+cout << sizeof(class2) << endl;  //output 64
 ```
 
 ## 参考  
 
-C++ Primer Plus  
+C++ Primer Plus, Chapter 3, 4  
 Introduction to Programming with C++, 3rd edition, Chapter 10  

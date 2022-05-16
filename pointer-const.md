@@ -1,4 +1,10 @@
-# const与指针
+# const与指针  
+
+注意：应在声明中对const进行初始化  
+
+```c++
+const int a = 5;
+```
 
 ## 保护数组  
 
@@ -49,5 +55,5 @@ int* e = &d; //报错，不能把const指针赋值给非const指针
 
 ## 参考  
 
-C++ Primer Plus, Chapter 7.3  
+C++ Primer Plus, Chapter 3.2, 7.3  
 Introduction to Programming with C++, 3rd edition, Chapter 11  

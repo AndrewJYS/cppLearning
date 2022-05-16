@@ -14,12 +14,19 @@ public:
     double double_b;
     short short_c;
     long long ll_d;
+    string ss;
 
     c() {}
 
     c(char* str) {
         str_a = str;
     }
+};
+
+union one4all {
+    int int_val;
+    long long ll_val;
+    char char_val;
 };
 
 int main()
@@ -36,12 +43,27 @@ int main()
     node nd;
     cout << sizeof(nd) << endl;  //output 24
 
+    one4all oa;
+    cout << sizeof(oa) << endl; // output 8
+
     int int_array[10];
     cout << sizeof(int_array) << endl;  //output 40
+    int* pa = int_array;
+    cout << sizeof(pa) << endl;  //output 8
 
-    char* str = "1243523636";
-    cout << sizeof(str) << endl;  //output 8
-    cout << sizeof(str[0]) << endl;  //output 1
+    string str1 = "1243523636";
+    cout << sizeof(str1) << endl;  //output 32
+
+    char str2[21] = "1243523636";
+    cout << sizeof(str2) << endl;  //output 21
+    cout << int(str2[15]) << endl;  // output 0
+
+    char str3[] = "1243523636";
+    cout << sizeof(str3) << endl;  //output 11
+
+    char* str4 = "1243523636";
+    cout << sizeof(str4) << endl;  //output 8
+    cout << sizeof(str4[0]) << endl;  //output 1
 
     vector<short> short_vec(40);
     cout << sizeof(short_vec) << endl;  //output 24
@@ -50,10 +72,10 @@ int main()
     cout << sizeof(double_vec) << endl;  //output 24
 
     c class1;
-    cout << sizeof(class1) << endl;  //output 32
+    cout << sizeof(class1) << endl;  //output 64
 
     c class2("1234567890");
-    cout << sizeof(class2) << endl;  //output 32
+    cout << sizeof(class2) << endl;  //output 64
 
     return 0;
 }
