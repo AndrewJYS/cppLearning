@@ -43,6 +43,18 @@ cout << tell << endl;  //address of first element
 cout << &tell << endl; //address of whole array
 ```
 
+可以用()声明数组元素为默认值（否则元素的值是不确定的），但不能直接初始化为我们想要的某个值  
+
+```c++
+int* a = new int[10]();
+cout << a[0] << endl; // 0
+delete [] a;
+
+string* strs = new string[10]();
+cout << strs[0] << endl; // ""
+delete [] strs;
+```
+
 ## 指针数组  
 
 声明指针数组：DataType* p[n];
@@ -89,11 +101,32 @@ delete [] list; //list为数组
 
 ```c++
 //使用无参构造函数创建对象
-ClassName* pObject = new ClassName();
+ClassName* pObject = new ClassName(); 
 ClassName* pObject = new ClassName;
 
 //使用有参构造函数创建对象
 ClassName* pObject = new ClassName(arguments);
+```
+
+如果类中没有默认构造函数，那么会报错  
+
+```c++
+class Test
+{
+public:
+    Test(int i): r(i){}
+private:
+    int r;
+};
+
+int main()
+{
+    //Test* t = new Test; // error
+    //Test* t = new Test(); // error
+    Test* t = new Test(1); // ok
+    delete t;
+    return 0;
+}
 ```
 
 **注意：**  
